@@ -632,7 +632,7 @@ class HFLM(TemplateLM):
             self._model = self.AUTO_MODEL_CLASS.from_pretrained(
                 pretrained,
                 revision=revision,
-                dtype=get_dtype(dtype),
+                torch_dtype=get_dtype(dtype),
                 trust_remote_code=trust_remote_code,
                 gguf_file=gguf_file,
                 quantization_config=quantization_config,
